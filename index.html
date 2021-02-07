@@ -3,31 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Momontum</title>
+    <title>JAVARITUM</title>
+    <meta name="description" content="This is my todo List" />
+    <!-- css -->
     <link rel="stylesheet" href="css/lndex.css" />
   </head>
 
+  <!-- body -->
   <body>
+    <!-- 날씨 -->
+    <div class="weather">
+      <div id="test">
+        <div class="weather__area">
+          <i class="fas fa-map-marker-alt"></i>
+          <span class="js-weather__home"></span>
+        </div>
+        <div class="weather__area">
+          <span class="js-weather__natuer"></span>
+        </div>
+        <div class="weather__area">
+          <span class="js-weather__temp"></span>
+          <i class="fas fa-temperature-low"></i>
+        </div>
+      </div>
+    </div>
+    <!-- 시계 -->
     <div class="js-clock">
       <h1>00:00</h1>
     </div>
-
+    <!-- 이름작성 -->
     <form class="js-form form">
-      <input type="text" placeholder="what ia your name?" />
+      <input type="text" required placeholder="what ia your name?" />
     </form>
-
-    <h4 class="js-greetings greetings"></h4>
-
-    <form class="js-toDoForm">
-      <input type="text" placeholder="Write a to do" />
-    </form>
-
-    <ul class="js-toDoList"></ul>
+    <div class="greeting__base">
+      <h4 class="js-greetings greetings"></h4>
+    </div>
+    <!-- 할일목록작성 -->
+    <div>
+      <form class="js-toDoForm">
+        <input type="text" placeholder="Write a to do" />
+      </form>
+      <!-- 할일목록 -->
+      <div>
+        <ul class="js-toDoList"></ul>
+      </div>
+    </div>
 
     <script src="js/clock.js"></script>
     <script src="js/gretting.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/bg.js"></script>
     <script src="js/weather.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

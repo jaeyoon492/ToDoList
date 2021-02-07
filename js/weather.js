@@ -1,10 +1,28 @@
+const homeLocation = document.querySelector(".js-weather__home");
+const homeTemperature = document.querySelector(".js-weather__temp");
+const homeNatuer = document.querySelector(".js-weather__natuer");
+
+const weather = document.querySelector(".js-weather");
+
 const API_KEY = "c82f640123da7eb005ea5e2c04d38655";
-const COORDS = "cords";
+const COORDS = "coords";
 
 function getweather(lat, lon) {
   fetch(
-    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`
-  );
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
+  )
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (json) {
+      const temperature = json.main.temp;
+      const plaece = json.name;
+      const nature = json.weather[0].main;
+
+      homeLocation.innerText = plaece;
+      homeTemperature.innerText = temperature;
+      homeNatuer.innerText = nature;
+    });
 }
 
 //위도,경도를 스토리지에 저장.
@@ -17,11 +35,11 @@ function handleGeoSucces(position) {
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
   const coordsObj = {
-    위도: latitude,
-    경도: longitude,
+    latitude: latitude,
+    longitude: longitude,
   };
-  saveCoords(coordsObj);
   getweather(latitude, longitude);
+  saveCoords(coordsObj);
 }
 
 //위치가 없는경우(위치찾기를 불허할때)

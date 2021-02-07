@@ -1,0 +1,25 @@
+/* 이름작성 */
+.js-form input {
+  width: 400px;
+  height: 50px;
+  font-size: 40px;
+  color: white;
+  border: none;
+  background: transparent;
+  border-bottom: solid 2px white;
+  text-shadow: 3px 3px 5px black;
+  margin-bottom: 15px;
+}
+
+/* 이름작성2 */
+.js-form input::placeholder {
+  color: white;
+  text-shadow: 3px 3px 5px black;
+}
+
+/* 이름 */
+.greeting__base h4 {
+  font-size: 40px;
+  text-shadow: 3px 3px 5px black;
+  margin-bottom: 50px;
+}

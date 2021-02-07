@@ -1,0 +1,14 @@
+/* 시계 */
+.js-clock {
+}
+
+.js-clock h1 {
+  width: 400px;
+  height: 150px;
+  font-size: 100px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 67px;
+  margin-bottom: 30px;
+  text-shadow: 3px 3px 5px black;
+}

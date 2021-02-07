@@ -47,7 +47,7 @@ function paintToDo(text) {
 }
 
 //TODO를 리스트화 할때 TODO를 분할하는 함수
-function handleSubmit(event) {
+function handleSubmit1(event) {
   event.preventDefault();
   const currentValue = toDoInput.value;
   paintToDo(currentValue);
@@ -68,7 +68,7 @@ function loadTodos() {
 
 function init() {
   loadTodos();
-  toDoForm.addEventListener("submit", handleSubmit);
+  toDoForm.addEventListener("submit", handleSubmit1);
 }
 
 init();

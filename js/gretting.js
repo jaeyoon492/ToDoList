@@ -14,7 +14,7 @@ function saveName(text) {
 //preventDefault는 현재 event의 기본 동작(새로고침)을 중단할때 쓴다.
 //input.value 인풋안에 내용을 currentValue에 저장.
 //paintGreeting, saveName함수들을 호출
-function handleSubmit(event) {
+function handleSubmit2(event) {
   //4번
   event.preventDefault();
   const currentValue = input.value;
@@ -27,7 +27,7 @@ function handleSubmit(event) {
 function askForName() {
   //3번
   form.classList.add(SHOWING_CN);
-  form.addEventListener("submit", handleSubmit);
+  form.addEventListener("submit", handleSubmit2);
 }
 
 //form클래스의 입력창을 제거
